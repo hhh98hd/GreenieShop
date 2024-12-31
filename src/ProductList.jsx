@@ -8,7 +8,7 @@ import { addItem } from './CartSlice';
 
 function ProductList() {
     const [showCart, setShowCart] = useState(false);
-    const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page\
+    const [showPlants, setShowPlants] = useState(false);
     const [addedItems, setAddedItems] = useState({});
 
     const cart = useSelector(state => state.cart.items);
@@ -253,12 +253,12 @@ function ProductList() {
     }
     const handleCartClick = (e) => {
         e.preventDefault();
-        setShowCart(true); // Set showCart to true when cart icon is clicked
+        setShowCart(true);
     };
     const handlePlantsClick = (e) => {
         e.preventDefault();
-        setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
-        setShowCart(false); // Hide the cart when navigating to About Us
+        setShowPlants(false);
+        setShowCart(false);
     };
 
     const handleContinueShopping = (e) => {
@@ -289,6 +289,7 @@ function ProductList() {
                     </div>
 
                 </div>
+                
                 <div style={styleObjUl}>
                     <div> <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a></div>
                     <div> 
